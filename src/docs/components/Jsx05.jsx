@@ -8,23 +8,23 @@
 import React from 'react';
 
 const Jsx05 = () => {
-  // const pass = "입장 가능"
-  // const notPass = "입장 불가"
-  // const lucky = "당첨"
-  // const unLucky = "꽝"
+  {/* const pass = "입장 가능" */ }
+  {/* const notPass = "입장 불가" */ }
+  {/*const lucky = "당첨" */ }
+  {/* const unLucky = "꽝" */ }
   const age = 16;
   const [pass, notPass, lucky, unLucky] = ["입장 가능", "입장 불가", "당첨", "꽝"];
   const isAdult = age >= 19;
-  const isEven = age % 2 == 0;
+  const isEven = age % 2 === 0;
 
   const passComponent = <div>{pass}</div>;
   const notPassComponent = <div>{notPass}</div>;
   const luckyComponent = <div>{lucky}</div>;
   const unLuckyComponent = <div>{unLucky}</div>;
 
-  // const enter = isAdult ? pass : notpass;
+  {/* const enter = isAdult ? pass : notpass; */ }
   const enter = isAdult ? passComponent : notPassComponent;
-  // const win = isEven ? lucky : unlucky;
+ {/* const win = isEven ? lucky : unlucky; */ }
   const win = isEven ? luckyComponent : unLuckyComponent;
 
   return (

@@ -1,8 +1,9 @@
 import React from 'react';
 
 const Component02 = (props) => {
-    console.log(props)
-    props.printName("함지현");
+    console.log(props) 
+    props.printName("홍길동"); { /* 사용한다. */}
+    
     return (
         <div>
             {props.children}

@@ -10,7 +10,6 @@ const Container = () => {
     return (
         <div>
             <Component02 printName={printName}> { /* 사용할 수 있도록 넘겨준다. */}
-                <span>회원입니다.</span>
             </Component02>
         </div>
     );
