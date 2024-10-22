@@ -16,10 +16,11 @@ const Colors = () => {
     const onClickToColorBlue = () => {setColor("blue")}
     // console.log(color) // 1. 콘솔로 확인해보니 color의 state값이 바뀌는것을 확인할 수 있다.
 
-    const onChangeToInpusValue = (e) => {
+    const onChangeToInpusValue = (e) => { // 4. 이벤트 객체를 인자로 받는다.
         console.log(e.target.value) // onChange가 됐을 때 확인용 콘솔
-        if(e.target.value === "핑크색"){ setColor("") } // 4. 핑크색 비교
-        return setResult(e.target.value)
+        if(e.target.value === "핑크색"){ setColor("") } // 4. 핑크색 비교, 만약 "핑크색"이라면 setColor를 호출하여 글자색을 없앤다.
+        return setResult(e.target.value) // 입력된 텍스트를 setResult를 사용하여 state 상태에 저장한다.
+                                            // 입력 필드에 사용자가 입력한 내용이 state에 저장되고, 화면에 표시된다.
     }
     console.log(color) // color 확인용 콘솔
 
