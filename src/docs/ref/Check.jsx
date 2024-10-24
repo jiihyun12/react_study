@@ -6,6 +6,7 @@ const Check = () => {
     const formRef = useRef();
 
     const onClickToCheck = () => {
+        // 빈 값 검사하기
         for(let input of inputRef.current){
             if(!input.value){
                 alert("오류")
@@ -28,7 +29,7 @@ const Check = () => {
                     <span>비밀번호</span>
                     <input type="text" name="password" ref={(element)=>{inputRef.current[1] = element}} />
                 </div>
-                <button onClick={onClickToCheck} type="button">전송</button>
+                <button type="button" onClick={onClickToCheck} >전송</button>
             </form>
         </div>
     );
