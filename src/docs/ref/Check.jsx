@@ -6,21 +6,22 @@ const Check = () => {
     const formRef = useRef();
 
     const onClickToCheck = () => {
+        // console.log(inputRef) // 배열
+
         // 빈 값 검사하기
+        // 배열이므로 반복문을 돌린다.
         for(let input of inputRef.current){
             if(!input.value){
-                alert("오류")
+               alert(`${input.name}를 입력하세요`)
                 return;
             }
         }
-
-
+        formRef.current.submit();
       };
-      formRef.current.submit();
     
     return (
         <div>
-            <form> ref={formRef}
+            <form ref={formRef}>
                 <div>
                     <span>아이디</span>
                     <input type="text" name="id" ref={(element)=>{inputRef.current[0] = element}}/>

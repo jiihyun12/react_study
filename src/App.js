@@ -1,13 +1,19 @@
-import './App.css';
-import FoodContainer from './docs/map/expert/FoodContainer';
+import { ThemeProvider } from "styled-components";
+import theme from "./global/theme";
+import GlobalStyle from "./global/globalStyle";
+import { RouterProvider } from "react-router-dom";
+import router from "./routes/router";
 
 
 function App() {
   return (
     <>
-    <FoodContainer />
+     <ThemeProvider theme={theme}>
+        <GlobalStyle />
+        <RouterProvider router={router} />
+      </ThemeProvider>
     </>
-  );
-};
+  )
+}
 
 export default App;

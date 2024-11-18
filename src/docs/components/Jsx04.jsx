@@ -13,10 +13,10 @@ const Jsx04 = () => {
 
     return (
         <div>
-           {login && guest && <div>비회원 로그인입니다.</div>}  {/*  login이 true이고, guest가 true라면 div를 보여준다.  */}
-            { login ? (  // login이 true라면 환영합니다 출력
+           {login && guest && <div>비회원 로그인입니다.</div>} 
+            { login ? (  
                 <div>{name}님 환영합니다.</div>
-            ) : (  // login이 false라면 로그인 실패 출력
+            ) : ( 
                 <div>로그인 실패!</div>
             )}
         </div>
